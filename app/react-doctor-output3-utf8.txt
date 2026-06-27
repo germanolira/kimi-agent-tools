@@ -1,0 +1,31 @@
+﻿[1mReact Doctor[22m [2mv0.5.8[22m
+
+[90m  [39m
+
+  [1mAll 69 issues[22m
+
+  [1mBugs[22m [2m>[22m [33m[2m40 warnings[22m[39m
+  [1mPerformance[22m [2m>[22m [33m[2m7 warnings[22m[39m
+  [1mAccessibility[22m [2m>[22m [33m[2m19 warnings[22m[39m
+  [1mMaintainability[22m [2m>[22m [33m[2m3 warnings[22m[39m
+
+  [2mRun[22m [1m[36mnpx react-doctor@latest --verbose[39m[22m [2mto list every error and warning[22m
+
+  [33mÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ[39m  [33m54[39m [2m/ 100[22m [33mCritical[39m
+  [33mÔöé ÔÇó ÔÇó Ôöé[39m  [33mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[39m[2mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ[22m
+  [33mÔöé  ÔöÇ  Ôöé[39m  React Doctor [2m(https://react.doctor)[22m
+  [33mÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ[39m
+
+
+[2m  ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ[22m
+
+  [1mShare:[22m [36mhttps://react.doctor/share?p=my-app&s=54&w=69&f=5[39m
+[2m  Tell others how you did on socials[22m
+
+  [1mDocs:[22m [36mhttps://react.doctor/docs[39m
+[2m  Learn more about fixing issues, setting up CI/CD, and[22m
+[2m  configuring rules with a config file[22m
+
+  [1mGitHub:[22m [36mhttps://github.com/millionco/react-doctor[39m
+[2m  Report issues and star the repository![22m
+
