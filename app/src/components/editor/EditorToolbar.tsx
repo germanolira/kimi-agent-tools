@@ -2,7 +2,7 @@ import {
   Undo2, Redo2, Bold, Italic, Underline,
   Library, Sigma, Users, Share2,
   Download, ChevronDown, FileText, Plus,
-  Target, Split
+  Target, Split, PanelLeftClose, PanelLeftOpen
 } from 'lucide-react';
 import { type RightPanelTab } from '@/pages/Editor';
 
@@ -17,16 +17,31 @@ interface EditorToolbarProps {
   onToggleSplitView: () => void;
   isFocusMode: boolean;
   onToggleFocusMode: () => void;
+  isSidebarOpen: boolean;
+  onToggleSidebar: () => void;
 }
 
 export default function EditorToolbar({
   docTitle, onUpdateTitle, onExport, wordCount, rightPanel, onTogglePanel,
-  isSplitView, onToggleSplitView, isFocusMode, onToggleFocusMode
+  isSplitView, onToggleSplitView, isFocusMode, onToggleFocusMode,
+  isSidebarOpen, onToggleSidebar
 }: EditorToolbarProps) {
   return (
     <div className="h-14 border-b border-[#E5E5E5] bg-white flex items-center px-4 shrink-0 z-10">
       {/* Left: Logo + File */}
       <div className="flex items-center gap-3 w-[280px] shrink-0">
+        <button
+          type="button"
+          onClick={onToggleSidebar}
+          className={`p-1.5 rounded-lg transition-all duration-150 hover:scale-105 active:scale-95 ${
+            isSidebarOpen ? 'bg-[#EEF4FF] text-[#0030FC] shadow-sm' : 'hover:bg-[#F8F8F8] text-[#666666] hover:text-black'
+          }`}
+          title={isSidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
+          aria-label={isSidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
+          aria-pressed={isSidebarOpen}
+        >
+          {isSidebarOpen ? <PanelLeftClose size={18} strokeWidth={1.5} /> : <PanelLeftOpen size={18} strokeWidth={1.5} />}
+        </button>
         <a href="/" className="flex items-center gap-2">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="9" r="8" />

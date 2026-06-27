@@ -65,15 +65,16 @@ const librarySources: LibrarySource[] = [
 
 export default function Editor() {
   const [doc, setDoc] = useState<EditorDocument>(initialDocument);
-  const [rightPanel, setRightPanel] = useState<RightPanelTab>('library');
+  const [rightPanel, setRightPanel] = useState<RightPanelTab>(null);
   const [showExport, setShowExport] = useState(false);
   const [exportFormat, setExportFormat] = useState<'latex' | 'pdf'>('latex');
   const [activeBlockId, setActiveBlockId] = useState<string | null>(null);
   const [wordCount] = useState(2048);
 
   const [sources, setSources] = useState<LibrarySource[]>(librarySources);
-  const [isSplitView, setIsSplitView] = useState(true);
+  const [isSplitView, setIsSplitView] = useState(false);
   const [isFocusMode, setIsFocusMode] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const handleUpdateBlock = useCallback((blockId: string, newContent: string) => {
     setDoc((prev) => ({
@@ -131,9 +132,11 @@ export default function Editor() {
         onToggleSplitView={() => setIsSplitView((prev) => !prev)}
         isFocusMode={isFocusMode}
         onToggleFocusMode={() => setIsFocusMode((prev) => !prev)}
+        isSidebarOpen={isSidebarOpen}
+        onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
       />
       <div className="flex-1 flex overflow-hidden">
-        <EditorSidebar document={doc} activeBlockId={activeBlockId} onSelectBlock={setActiveBlockId} />
+        {isSidebarOpen && <EditorSidebar document={doc} activeBlockId={activeBlockId} onSelectBlock={setActiveBlockId} />}
         <EditorCanvas
           document={doc}
           activeBlockId={activeBlockId}

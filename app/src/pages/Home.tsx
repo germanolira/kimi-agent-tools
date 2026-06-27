@@ -1,63 +1,33 @@
-import { useLenis } from '@/hooks/useLenis';
-import Navbar from '@/sections/Navbar';
-import HeroSection from '@/sections/HeroSection';
-import TrustedBySection from '@/sections/TrustedBySection';
-import FeaturesBandSection from '@/sections/FeaturesBandSection';
-import HowItWorksSection from '@/sections/HowItWorksSection';
-import FeatureEditorialSection from '@/sections/FeatureEditorialSection';
-import TestimonialsSection from '@/sections/TestimonialsSection';
-import UseCasesSection from '@/sections/UseCasesSection';
-import CTASection from '@/sections/CTASection';
-import Footer from '@/sections/Footer';
-
 export default function Home() {
-  useLenis();
-
   return (
-    <div className="relative">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <TrustedBySection />
-        <FeaturesBandSection />
-        <HowItWorksSection />
-        <FeatureEditorialSection
-          label="EQUATION EDITOR"
-          headline="Math that flows like thought."
-          body="Forget memorizing commands. Type 'integral from 0 to infinity of e to the minus x' and watch it transform into a beautifully typeset equation. Edit with your keyboard or your mouse — whatever feels natural."
-          features={[
-            'Natural language input',
-            'Real-time LaTeX preview',
-            'Smart autocomplete for symbols',
-          ]}
-          ctaText="Explore the editor →"
-          images={[
-            { src: '/editor-equation.jpg', alt: 'Equation editor', revealDirection: 'left' },
-            { src: '/editor-symbols.jpg', alt: 'Symbols palette', revealDirection: 'right' },
-            { src: '/editor-document.jpg', alt: 'Document view', revealDirection: 'left' },
-          ]}
-        />
-        <FeatureEditorialSection
-          reversed
-          label="COLLABORATION"
-          headline="Built for teams, designed for focus."
-          body="Work together without the chaos. MathDesk shows every collaborator's cursor in real time, lets you leave inline comments on specific equations, and maintains a full version history so you never lose an insight."
-          features={[
-            'Real-time multi-user cursors',
-            'Inline comments on equations',
-            'Version history with diff view',
-          ]}
-          ctaText="See how teams use MathDesk →"
-          images={[
-            { src: '/collaboration-cursors.jpg', alt: 'Collaborative editing', revealDirection: 'left' },
-          ]}
-          bgColor="#F8F8F8"
-        />
-        <TestimonialsSection />
-        <UseCasesSection />
-        <CTASection />
-      </main>
-      <Footer />
+    <div className="min-h-screen w-full bg-white flex flex-col items-center justify-center gap-12 px-6">
+      <header className="flex flex-col items-center gap-3 text-center">
+        <a href="/" className="flex items-center gap-2" aria-label="MathDesk">
+          <svg width="22" height="22" viewBox="0 0 18 18" fill="none" stroke="#000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="9" cy="9" r="8" />
+            <line x1="9" y1="1" x2="9" y2="17" />
+            <line x1="1" y1="9" x2="17" y2="9" />
+            <line x1="3.5" y1="3.5" x2="14.5" y2="14.5" />
+            <line x1="14.5" y1="3.5" x2="3.5" y2="14.5" />
+          </svg>
+          <span className="font-['Playfair_Display'] text-2xl font-normal">MathDesk</span>
+        </a>
+      </header>
+
+      <nav className="flex flex-col sm:flex-row items-center gap-4" aria-label="Main">
+        <a
+          href="#editor"
+          className="font-['Inter'] text-sm font-medium tracking-tight text-white bg-[#0030FC] rounded-xl px-8 py-4 hover:bg-[#0024DB] hover:scale-[1.02] active:scale-95 transition-all duration-200 ease-out shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_-8px_rgba(0,48,252,0.4)]"
+        >
+          Editor
+        </a>
+        <a
+          href="#questoes"
+          className="font-['Inter'] text-sm font-medium tracking-tight text-[#0030FC] bg-white border border-[#E5E5E5] rounded-xl px-8 py-4 hover:bg-[#F8F8F8] hover:border-[#0030FC] hover:scale-[1.02] active:scale-95 transition-all duration-200 ease-out"
+        >
+          Questões
+        </a>
+      </nav>
     </div>
   );
 }
